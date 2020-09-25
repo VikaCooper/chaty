@@ -25,5 +25,13 @@ export const constantRouterMap = [
         meta: { title: '关于我', keepAlive: false }
       }
     ]
+  },
+  {
+    path: '/login',
+    component: () => import('@/views/login/index'),
+    meta: {
+      title: 'Chaty',
+      keepAlive: false
+    }
   }
 ]
