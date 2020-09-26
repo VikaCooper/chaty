@@ -24,7 +24,7 @@
 @mixin flexbox($jc:space-between, $ai:center, $fd:row, $fw:nowrap) {
   display: flex;
   display: -webkit-flex;
-  flex: 1;
+  // flex: 1;
   justify-content: $jc;
   -webkit-justify-content: $jc;
   align-items: $ai;

@@ -64,6 +64,7 @@ export default {
   methods: {
     onSubmit(values) {
       console.log('form data: ', values)
+      this.$router.push('/home')
     },
     handleRegister() {
       this.$store.dispatch('setLoginPop', false)

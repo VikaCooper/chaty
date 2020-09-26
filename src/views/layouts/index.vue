@@ -6,7 +6,7 @@
       </keep-alive>
       <router-view v-else></router-view>
     </div>
-    <div class="layout-footer">
+    <div v-if="false" class="layout-footer">
       <TabBar :data="tabbars" @change="handleChange" />
     </div>
   </div>
