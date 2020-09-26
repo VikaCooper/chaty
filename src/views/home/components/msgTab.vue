@@ -2,7 +2,7 @@
   <div class="msg-tab__container">
     <van-list v-model="loading" :finished="finished" finished-text="已经到底了哦~" @load="onLoad" @refresh="onRefresh">
       <template v-if="messages && messages.length">
-        <div v-for="(item, index) in messages" :key="index" class="msg__card">
+        <div v-for="(item, index) in messages" :key="index" class="msg__card" @click="handleCardClick(item)">
           <van-image round width="45px" height="45px" :src="item.avatar" class="msg__card__avatar" />
           <div class="msg__card__cont">
             <div class="msg__card__cont__name">{{ item.name }}</div>
@@ -74,6 +74,12 @@ export default {
     },
     onRefresh() {
 
+    },
+    handleCardClick(chatObj) {
+      this.$router.push({
+        name: 'ChatRoom',
+        params: chatObj
+      })
     }
   }
 }

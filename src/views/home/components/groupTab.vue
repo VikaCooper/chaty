@@ -2,7 +2,7 @@
   <div class="grp-tab__container">
     <van-list v-model="loading" :finished="finished" finished-text="已经到底了哦~" @load="onLoad" @refresh="onRefresh">
       <div v-if="messages && messages.length" class="grp__card__wrapper">
-        <div v-for="(item, index) in messages" :key="index" class="grp__card">
+        <div v-for="(item, index) in messages" :key="index" class="grp__card" @click="handleCardClick(item)">
           <van-image round width="60px" height="60px" :src="item.avatar" class="grp__card__avatar" />
           <div class="grp__card__cont">
             <div class="grp__card__cont__name">{{ item.name }}</div>
@@ -101,7 +101,13 @@ export default {
   },
   methods: {
     onLoad() {},
-    onRefresh() {}
+    onRefresh() {},
+    handleCardClick(chatObj) {
+      this.$router.push({
+        name: 'ChatRoom',
+        params: chatObj
+      })
+    }
   }
 }
 </script>

@@ -17,6 +17,12 @@ export const constantRouterMap = [
         name: 'Home',
         component: () => import('@/views/home/index'),
         meta: { title: '首页', keepAlive: false }
+      },
+      {
+        path: '/chatroom',
+        name: 'ChatRoom',
+        component: () => import('@/views/chatroom/index'),
+        meta: { title: '聊天室', keepAlive: true }
       }
     ]
   },

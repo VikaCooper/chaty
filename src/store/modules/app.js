@@ -1,5 +1,6 @@
 const state = {
-  userName: ''
+  userName: '',
+  userId: '01'
 }
 const mutations = {
   SET_USER_NAME(state, name) {
