@@ -33,5 +33,13 @@ export const constantRouterMap = [
       title: 'Chaty',
       keepAlive: false
     }
+  },
+  {
+    path: '/*',
+    component: () => import('@/views/404'),
+    meta: {
+      title: '404',
+      keepAlive: false
+    }
   }
 ]
